@@ -1,0 +1,28 @@
+[project]
+name = "lab4-airline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Marian Balukh", email = "balukhmrian@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "mypy>=2.4.1",
+    "psycopg[binary]>=3.3.8",
+    "ruff>=0.17.3",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+lab4-airline = "lab4_airline:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.3",
+]
